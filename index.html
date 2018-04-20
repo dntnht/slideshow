@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700">
+<style>
+body {
+  font-family: "Source Sans Pro";
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 9</div>
+    <img src="https://i.imgur.com/yoILwSZ.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 9</div>
+    <img src="https://i.imgur.com/W7oME9W.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 9</div>
+    <img src="https://i.imgur.com/HNg9pr8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 9</div>
+    <img src="https://i.imgur.com/Qoz4gdV.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 9</div>
+    <img src="https://i.imgur.com/nQAfTIg.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 9</div>
+    <img src="https://i.imgur.com/tTD3Hnz.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 9</div>
+    <img src="https://i.imgur.com/sXDX1Z1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 9</div>
+    <img src="https://i.imgur.com/6FI7zCS.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 9</div>
+    <img src="https://i.imgur.com/XFrFitO.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/yoILwSZ.jpg" style="width:100%" onclick="currentSlide(1)" alt="Les mobilisations commencent en général dans le calme, ou presque.
+Pour rassembler, de nombreux fumigènes sont allumés et des slogans de manifestations sont lancés.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/W7oME9W.jpg" style="width:100%" onclick="currentSlide(2)" alt="En plus des cheminots, on retrouve sur place beaucoup de
+jeunes étudiants et lycéens.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/HNg9pr8.jpg" style="width:100%" onclick="currentSlide(3)" alt="La musique aide à instaurer une bonne ambiance. Beaucoup se mettent à danser.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/Qoz4gdV.jpg" style="width:100%" onclick="currentSlide(4)" alt="Les étudiants sont vites rejoints par les cheminots sur la « piste de danse ».">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/nQAfTIg.jpg" style="width:100%" onclick="currentSlide(5)" alt="A quelques mètres de la gare de l’Est, les premières dégradations. La plupart des commerces sur le chemin du cortège de tête ont fermé leurs portes ou, pour certains comme les banques, se sont barricadés avec des planches en bois.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/tTD3Hnz.jpg" style="width:100%" onclick="currentSlide(6)" alt="Le cortège rejoint la place de la République, dans une ambiance toujours calme. Une femme sans-abri rejoint les étudiantes pour discuter et les encourager dans leur lutte, affirmant que c’est grâce aux jeunes comme elles, qui se <em>« bougent dans la rue »</em>, que les <em>« choses peuvent avancer »</em>.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/sXDX1Z1.jpg" style="width:100%" onclick="currentSlide(7)" alt="Des étudiants tentent de bloquer l’arrivée de la ministre Frédérique Vidal à la Sorbonne.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/6FI7zCS.jpg" style="width:100%" onclick="currentSlide(8)" alt="Peu d’effectifs policiers mis en place cette-fois ci. Ce rassemblement se revendique comme <em>« pacifiste »</em>, même si quelques personnes ne sont pas d’accord et préfère passer à l'action.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.imgur.com/XFrFitO.jpg" style="width:100%" onclick="currentSlide(9)" alt="Depuis début mars, une dizaine d'université sont bloquées à travers le pays. En région parisienne, des comités de mobilisation se rendent à Tolbiac, où des assemblées interfacs, de ateliers, des débats, des conférences et des cours alternatifs sont organisés.">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
